@@ -1,6 +1,5 @@
 # HudsunMedia
 
 
-//
-This is v1 of the redesign version of HudsunMedia.com
-//
+## Contents
+Site is pulling content from WordPress, utilizing WordPress Rest API.

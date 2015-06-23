@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: "BebasNeueThin";
+    src: url("BebasNeue-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BebasNeueLight";
+    src: url("BebasNeue-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BebasNeueBook";
+    src: url("BebasNeue-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BebasNeueBold";
+    src: url("BebasNeue-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue-Regular.otf") format("opentype");
+}
+
+

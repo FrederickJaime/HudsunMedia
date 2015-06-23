@@ -1,0 +1,249 @@
+@import "compass/css3";
+@import "blend-modes";
+
+// Custom Fonts
+
+
+
+
+$bebas-reg: "BebasNeue", sans-serif;
+$bebas-bold: "BebasNeueBold", sans-serif;
+$helvetica: helvetica, sans-serif;
+$palatino:"Palatino Linotype", Palatino, serif;
+$garamond-fake:"Crimson Text", serif;
+
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+// Colors
+$brand-black: #000;
+$brand-white: #fff;
+
+$brand-grey-dark:#3c3c3c;
+$brand-grey-light:#d0d0d0;
+
+$brand-color:#ee3a39;
+
+$brand-link-color:#111111;
+
+// Clearfix
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+//@include border-radius(25px);
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin bp-portrait {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-regular {
+  @media only screen and (max-width: 736px) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media only screen and (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin mobile-small-375 {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile-small-360 {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin mobile-small-320 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+/*------------------------------------*/
+@mixin mobile-landscape-414 {
+  @media only screen and (max-device-height: 414px) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-480 {
+  @media only screen and (max-device-height: 480px) {
+    @content;
+  }
+}
+/*
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+*/
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+//@include opacity(0.8);
+ 
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+//img {  @include filter(grayscale, 100%);} // usage
+ 
+
+@mixin filter( $var ) {
+    -webkit-filter: $var;
+    -moz-filter: $var;
+    -ms-filter: $var;
+    -o-filter: $var;
+    filter: $var;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+                
+.saturate-me{
+ 
+  @include filter(saturate(0));
+   
+   
+}
+.contrast-me{
+    @include filter(saturate(0));
+
+}
+
+/* GLOBAL : BEGIN */
+
+    body{
+        min-width: 320px;
+
+    }
+    .section-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+
+    
+        .section{
+                position: relative;
+                display: block;
+                width: 100%;
+                max-width: 960px;
+                
+                margin: 0px auto;
+                padding-bottom:0px;
+
+
+
+            }
+        .long-wrapper{
+                position:relative;
+                display: block;
+                width: 100%;
+                max-width: 1130px;
+                margin:0px auto;
+                
+            }
+
+    }
+
+.video{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+
+#work-video{
+    position: absolute;
+    background:#111;
+}
+
+.anchored{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0px;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+  overflow: hidden;
+
+  img{
+    position:relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    /*height:  100%;*/
+    /*width: auto;*/
+  }
+}
+
+
+/* GLOBAL : END */
+
